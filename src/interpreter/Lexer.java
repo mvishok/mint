@@ -37,6 +37,12 @@ public class Lexer {
                     }
                     inString = true;
                     currentWord.append(c);
+                } else if (c == '\n') {
+                    if (currentWord.length() > 0) {
+                        tokens.add(currentWord.toString());
+                        currentWord.setLength(0);
+                    }
+                    tokens.add("\\n");
                 } else if (Character.isWhitespace(c)) {
                     if (currentWord.length() > 0) {
                         tokens.add(currentWord.toString());
