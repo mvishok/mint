@@ -43,14 +43,4 @@ public class fns {
 
         System.out.println();
     }
-
-    public void main(){
-        List<String> args = new ArrayList<>();
-        args.add("'World'");
-        args.add("123");
-        List<Object> parsed = parse(args);
-        System.out.println(parsed);
-    }
-
-    
 }
