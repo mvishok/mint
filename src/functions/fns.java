@@ -35,9 +35,12 @@ public class fns {
     }
 
     public void print(List<String> args) {
-        for (String arg : args) {
+        
+        List<Object> pargs = parse(args);
+        for (Object arg : pargs) {
             System.out.print(arg + " ");
         }
+
         System.out.println();
     }
 
