@@ -61,9 +61,9 @@ public class Lexer {
         return tokens;
     }
 
-    public static void main(String[] args) {
-        Lexer lexer = new Lexer("print \"my world\" 123 true\nif condition then\n...\nend\n");
-        List<String> tokens = lexer.tokenize();
-        System.out.println(tokens);
-    }
+    // public static void main(String[] args) {
+    //     Lexer lexer = new Lexer("print \"my world\" 123 true\nif condition then\n...\nend\n");
+    //     List<String> tokens = lexer.tokenize();
+    //     System.out.println(tokens);
+    // }
 }
