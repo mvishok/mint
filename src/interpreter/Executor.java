@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import modules.*;
+import functions.*;
 
 public class Executor {
 
@@ -14,6 +15,7 @@ public class Executor {
     private Map<String, String> functions;
 
     logger log = new logger();
+    fns fn = new fns();
 
     public Executor(List<String> tokens) {
         this.tokens = tokens;
@@ -44,7 +46,7 @@ public class Executor {
                         args.add(tokens.get(index));
                         index++;
                     }
-                    print(args);
+                    fn.print(args);
                 }
 
             } else {
@@ -52,13 +54,6 @@ public class Executor {
             }
             index++;
         }
-    }
-
-    private void print(List<String> args) {
-        for (String arg : args) {
-            System.out.print(arg + " ");
-        }
-        System.out.println();
     }
 
     // public static void main(String[] args) {
